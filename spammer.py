@@ -3,7 +3,7 @@ import pexpect
 from time import sleep
 
 sticker = '/data/data/com.termux/files/home/spammer/blinb.tgs'
-chat = 'cubecatinprog'
+chat = 'windy31chat'
 
 tg = pexpect.spawn('telegram-cli --json --disable-output')
 
