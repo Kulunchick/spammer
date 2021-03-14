@@ -27,4 +27,4 @@ while True:
         print('OK')
         sleep(0.1)
     except:
-        tg.interact()
+        tg.sendline(line)
