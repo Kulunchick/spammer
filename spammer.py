@@ -22,7 +22,7 @@ tg.expect('>')
 tg.sendline(line)
 while True:
     try:
-        tg.expect('SUCCESS', timeout=1)
+        tg.expect('>', timeout=1)
         tg.sendline(line)
         print('OK')
         sleep(0.1)
