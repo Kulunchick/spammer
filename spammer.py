@@ -2,7 +2,7 @@ import sys
 import pexpect
 from time import sleep
 
-sticker = 'blinb.webp'
+sticker = '/data/data/com.termux/files/home/spammer/blinb.tgs'
 chat = 'cubecatinprog'
 
 tg = pexpect.spawn('telegram-cli --json --disable-output')
@@ -13,7 +13,10 @@ print('Resolve')
 tg.expect('>')
 tg.sendline(f'channel_join @{chat}')
 print('Join')
-
+tg.expect('>')
+tg.sendline(f'contact_search {chat}')
+tg.expect('>')
+tg.sendline('contact_list')
 line = f'send_document @{chat} {sticker}'
 tg.expect('>')
 tg.sendline(line)
@@ -24,4 +27,4 @@ while True:
         print('OK')
         sleep(0.1)
     except:
-        tg.sendline(line)
+        tg.interact()
