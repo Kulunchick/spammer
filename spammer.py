@@ -16,7 +16,7 @@ print('Join')
 tg.expect('SUCCESS')
 line = f'send_document @{chat} {sticker}'
 tg.sendline(line)
-while True:
+for i in range(10000):
     try:
         tg.expect('SUCCESS', timeout=1)
         tg.sendline(line)
