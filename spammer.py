@@ -10,7 +10,7 @@ video = os.listdir(f'{dir}/video')
 image = os.listdir(f'{dir}/image')
 sticker = f'{dir}/blinb.tgs'
 
-type_spam = 'video'
+type_spam = 'image'
 
 chat = 'cubecatinprog'
 
