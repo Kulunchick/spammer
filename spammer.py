@@ -4,13 +4,13 @@ from time import sleep
 import os
 from random import randint
 
-dir = '/data/data/com.termux/files/home/spammer'
+dir = '/root/spammer'
 
 video = os.listdir(f'{dir}/video')
 image = os.listdir(f'{dir}/image')
 sticker = f'{dir}/blinb.tgs'
 
-type_spam = 'image'
+type_spam = 'video'
 
 chat = 'cubecatinprog'
 
@@ -34,7 +34,8 @@ elif type_spam == 'video':
 elif type_spam == 'image':
     line = f'send_photo @{chat} %s'
     def spam():
-        tg.sendline(line % f'{dir}/image/{video[randint(0, len(video)-1)]}')
+        tg.sendline(line % f'{dir}/image/{image[randint(0, len(image)-1)]}')
+spam()
 for i in range(10000):
     try:
         tg.expect('SUCCESS', timeout=1)
